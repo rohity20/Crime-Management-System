@@ -1,0 +1,11 @@
+.forpad{
+    padding-left: 10vh;
+    padding-right: 10vh;
+    background-color: rgb(174, 168, 160);
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+.padhead{
+    padding-bottom: 4vh;
+}
