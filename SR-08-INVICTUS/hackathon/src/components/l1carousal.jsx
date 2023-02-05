@@ -3,8 +3,10 @@ import {
   MDBCarousel,
   MDBCarouselItem,
 } from 'mdb-react-ui-kit';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 
 export default function L1carousal() {
+  const navigate = useNavigate();
   return (
     <div style={{
         display: 'flex',
@@ -12,6 +14,7 @@ export default function L1carousal() {
         justifyContent: 'center',
         height: '100vh',
       }}>
+     
     <MDBCarousel showIndicators showControls fade>
       <MDBCarouselItem
         className='w-100 d-block'
@@ -38,6 +41,9 @@ export default function L1carousal() {
         
       </MDBCarouselItem>
     </MDBCarousel>
+
+   
+    {/* <NavLink to='/complaint'> <button >Create Complaint</button></NavLink> */}
     </div>
   );
 }

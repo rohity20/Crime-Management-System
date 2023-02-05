@@ -6,7 +6,7 @@ const router = express.Router();
 /* reviews */
 
 router.post("/createcase", postCase);
-router.get("/getcase/:id", getCase);
+router.get("/getcase", getCase);
 router.patch("/updatecase/:id", updateCase);
 router.delete("/deletecase/:id", deleteCase);
 

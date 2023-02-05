@@ -17,6 +17,7 @@ import ShiftManagement from './components/ShiftManagement';
 import Footer from './components/footer';
 import Header from './components/Header';
 import Loginuser from './components/loginUser';
+import UserFpage from './components/userFrontPage';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -29,6 +30,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path='/' element={<Welcome/>} />
         <Route path='/l1carousal' element={<L1officerStartPage />} />
+        <Route path='/userFpage' element={< UserFpage />} />
+
         <Route path='/complaint' element={<User_entry />} />
         <Route path='/eventlist' element={<Eventlist />} />
         <Route path='/shiftmanagement' element={<ShiftManagement />} />
@@ -41,7 +44,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/newcases' element={<NewComplaints type="New" />} />
       </Routes>
     </BrowserRouter>
+    <div style={{marginTop: "20px"}}>
     <Footer />
+    </div>
   </React.StrictMode>,
 )
 

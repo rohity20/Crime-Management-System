@@ -19,44 +19,49 @@ module.exports.postUser = async(req, res) => {
 // Login User
 module.exports.loginUser = async (req, res, next) => {
   const { email, password } = req.body;
+  console.log(email);
+  console.log(password);
 
   // checking if user has given password and email both
 
-  if (!email || !password) {
-    // return next(new ErrorHander("Please Enter Email & Password", 400));
-    res.status(404).json({
-      success: false,
-      message: "Please Again Logged In",
-    });
-  }
+  // if (!email || !password) {
+  //   // return next(new ErrorHander("Please Enter Email & Password", 400));
+  //   res.status(404).json({
+  //     success: false,
+  //     message: "Please Again Logged In",
+  //   });
+  // }
 
-  const user = await User.findOne({ email }).select("+password");
+  // const user = await User.findOne({ email: email }).select("+password");
+  const user = await User.findOne({ email: email });
+  console.log(user);
 
-  if (!user) {
-    // return next(new ErrorHander("Invalid email or password", 401));
-    res.status(404).json({
-      success: false,
-      message: "Logged In",
+  // if (!user) {
+  //   // return next(new ErrorHander("Invalid email or password", 401));
+  //   res.status(404).json({
+  //     success: false,
+  //     message: "Logged In",
       
       
-    });
-  }
+  //   });
+  // }
 
   // const isPasswordMatched = await user.comparePassword(password);
 
-  if (user.password == password) {
-    // res.status(404).json({
-    //   success: false,
-    //   message: "false password",
-    // });
-    res.status(201).json(user);
+  if (user) {
+    res.status(201).json({
+      success: true,
+      message: "Logged In",
+    });
+    
+    // res.status(201).json(user);
   }
   else {
-    // res.status(201).json({
-    //   success: true,
-    //   message: "Logged In",
-    // });
-    res.status(404).json("error");
+    res.status(404).json({
+      success: false,
+      message: "false password",
+    });
+    // res.status(404).json("error");
   }
 
   // sendToken(user, 200, res);

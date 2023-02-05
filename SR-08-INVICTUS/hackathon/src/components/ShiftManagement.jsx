@@ -5,7 +5,7 @@ import Header from './Header';
 export default function ShiftManagement() {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <MDBTable>
         <MDBTableHead dark>
           <tr>

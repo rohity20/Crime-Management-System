@@ -52,12 +52,15 @@ export default function L1menu() {
           </MDBBtn>
         </NavLink>
       </div>
+      
       <div>
+      <NavLink to='/eventlist'>
         <MDBBtn type='submit' style={
           buttonStyle
         } block>
           Upcoming Events
         </MDBBtn>
+        </NavLink>
       </div>
     </form>
   );

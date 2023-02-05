@@ -3,8 +3,18 @@ const mongoose = require('mongoose');
 const caseSchema = new mongoose.Schema({
 
     
-    userId: {
+    name: {
         type: String
+    },
+    
+    
+    email: {
+        type: String
+    },
+
+    
+    phone: {
+        type: Number
     },
 
     description: {

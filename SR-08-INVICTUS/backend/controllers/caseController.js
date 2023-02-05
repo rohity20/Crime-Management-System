@@ -2,7 +2,7 @@ const Case = require("../schemas/caseSchema");
 
 module.exports.postCase = (req, res) => {
   const { case1 } = req.body;
-  const userinfo = new Case({ case1 });
+  const userinfo = new Case(req.body);
   userinfo
     .save()
     .then(() => {
@@ -17,10 +17,10 @@ module.exports.postCase = (req, res) => {
 
 module.exports.getCase = async (req, res) => {
   try {
-    const { id } = req.params;
-    const users = await Case.findById({ _id: id });
-    // console.log(clients);
-    res.status(201).json(clients);
+    // const { id } = req.params;
+    const users = await Case.find();
+    // console.log(users);
+    res.status(201).json(users);
   } catch (err) {
     res.status(404).json(err);
   }

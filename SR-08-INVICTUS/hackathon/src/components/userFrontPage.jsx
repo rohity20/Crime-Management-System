@@ -20,11 +20,11 @@ import { MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 import Marquee from "react-fast-marquee";
 
 
-export default function Welcome() {
+export default function UserFpage() {
     return (
         <div>
             <div>
-                <MDBCarousel showIndicators showControls fade>
+                {/* <MDBCarousel showIndicators showControls fade>
                     <MDBCarouselItem
                         className='w-100 d-block'
                         itemId={1}
@@ -49,7 +49,7 @@ export default function Welcome() {
                     >
                         <h5>Param Bir Singh Appointed As Commissioner Of Mumbai Police</h5>
                     </MDBCarouselItem>
-                </MDBCarousel>
+                </MDBCarousel> */}
             </div>
             <div style={{
         backgroundColor: 'black',
@@ -68,14 +68,8 @@ export default function Welcome() {
         <MDBCol size='md'>
             
         <div className='cardplace'>
-        <MDBListGroup style={
-            {
-                 minWidth: '22rem', 
-                 "backgroundColor": "black",
-                 }} dark>
-      <MDBListGroupItem active style={{
-        "backgroundColor": "black" 
-      }}noBorders aria-current='true' className='px-3'>
+        {/* <MDBListGroup style={{ minWidth: '22rem' }} dark>
+      <MDBListGroupItem active noBorders aria-current='true' className='px-3'>
         
         Updates & News
       </MDBListGroupItem>
@@ -115,31 +109,30 @@ export default function Welcome() {
                 *     NM traffic department to create awareness through innovative programmes during road safety week     *
             </div>
             </Marquee>
-      </MDBListGroupItem>      
-    </MDBListGroup>
+      </MDBListGroupItem>       */}
+    {/* </MDBListGroup> */}
             </div> 
         </MDBCol>
         <MDBCol size='md'>
           <div className='cardplace'>
-          <MDBListGroup style={{ minWidth: '10rem' }} dark>
-      <MDBListGroupItem active style={{
-        "backgroundColor": "black"
-      }}noBorders aria-current='true' className='px-3'>
+          <MDBListGroup style={{ minWidth: '15rem' }} dark>
+      <MDBListGroupItem active noBorders aria-current='true' className='px-3' style={{
+        backgroundColor: 'black',
+        color: 'white'
+      }} >
         <div>
-            I want to Login as
+            User Options
         </div>
         
       </MDBListGroupItem>
-    
-      <MDBListGroupItem noBorders className='px-3'>
-      <NavLink to='/login'>
-                    <button>LOGIN AS OFFICER</button>
+      <MDBListGroupItem noBorders className='px-5'>
+      <NavLink to='/complaint'>
+                    <button>Register New Complaint</button>
                 </NavLink>
       </MDBListGroupItem>
-      
-      <MDBListGroupItem noBorders className='px-3'>
-      <NavLink to='/loginUser'>
-                    <button>LOGIN AS USER</button>
+      <MDBListGroupItem noBorders className='px-5'>
+      <NavLink to='/newcases'>
+                    <button>Track Complaints</button>
                 </NavLink>
       </MDBListGroupItem>
       

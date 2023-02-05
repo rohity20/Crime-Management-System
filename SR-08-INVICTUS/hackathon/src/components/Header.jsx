@@ -36,7 +36,7 @@ export default function Header() {
           <MDBCollapse show={showNavColorSecond} navbar id='navbarColor02'>
             <MDBNavbarNav className='me-auto mb-2 mb-lg-0'>
               <MDBNavbarItem className='active'>
-                <MDBNavbarLink aria-current='page' href='/welcome'>
+                <MDBNavbarLink aria-current='page' href='/'>
                   Home
                 </MDBNavbarLink>
               </MDBNavbarItem>
